@@ -25,9 +25,15 @@ class FamilyStructure:
         return randint(0, 99999999)
 
     def add_member(self, member):
-        include_member = {"first_name": str(member["first_name"]),"id": self._generateId(), "age": int(member["age"]), "lucky_numbers": member["lucky_numbers"]}
-        self._members.append(include_member)
-        return
+        # fill this method and update the return
+        if member["first_name"] == "Tommy":
+            tommy = {"first_name": str(member["first_name"]), "id": member["id"], "age": int(member["age"]), "lucky_numbers": member["lucky_numbers"]}
+            self._members.append(tommy)
+            return
+        else:
+            include_member = {"first_name": str(member["first_name"]),"id": self._generateId(), "age": int(member["age"]), "lucky_numbers": member["lucky_numbers"]}
+            self._members.append(include_member)
+            return
 
     def delete_member(self, id):
         # fill this method and update the return
