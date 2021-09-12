@@ -51,7 +51,7 @@ def get_member(member_id):
 def include_member():
     member = request.get_json()
     jackson_family.add_member(member)
-    return jsonify({"msg":"Member Added"}), 200
+    return jsonify({"msg":"Member add"}), 200
 
 
 @app.route('/member/<int:member_id>', methods=['DELETE'])
